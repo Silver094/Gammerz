@@ -3,6 +3,7 @@
    <head>
 <link rel="stylesheet" href="home.css">
 </head> <script>
+    var intervalID;
     var modal=document.getElementById('log');
   window.onclick=function(Event)
   {
@@ -24,13 +25,22 @@
       if (Index > x.length) {Index = 1}
       x[Index-1].style.display="block";
 
-      setTimeout(javaslide, 3000);
+      intervalID = setTimeout(javaslide, 3000);
     }
    function checkdetail()
    {
        window.location.replace("https:www.google.com");
    }
- 
+
+   function handleOnSignInClick(){
+        document.getElementById('log').style.display='block';
+        clearTimeout(intervalID);
+   }
+
+   function handleOnClose(){
+        document.getElementById('log').style.display='none';
+        intervalID = setTimeout(javaslide, 3000);
+   }
    </script>
 
     
@@ -40,7 +50,7 @@
             <button onclick="document.location='Home.html'" >Home</button>
             <button onclick="document.location='Event.html'" >Event</button>
             <button onclick="document.location='About.html'" >About</button>
-           <button style="float: right;"onclick="document.getElementById('log').style.display='block';">Sign in</button>
+           <button style="float: right;"onclick=handleOnSignInClick()>Sign in</button>
         </nav>
             <!--slides-->
             <section>
@@ -71,7 +81,7 @@
 
                 <div class="avatar">
                     
-                <span class="close" title="close" onclick="document.getElementById('log').style.display='none'">&times;</span>
+                <span class="close" title="close" onclick=handleOnClose()>&times;</span>
                     <img src="user.jpg" alt="no-image" class="user">
                     </div>
                     <b>
