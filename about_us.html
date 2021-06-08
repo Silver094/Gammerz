@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<link rel="stylesheet" href="home.css">
+<script>
+    var modal=document.getElementById('log');
+    window.onclick=function(Event)
+    {
+        if(event.target==log)
+        {
+            modal.style.display="none";
+            
+        }}
+    </script>
+    </head>
+    <body style="background-color: beige; margin: 0 0 0 0;">
+            <!--navigation bar-->
+        <nav class="head">
+            <button onclick="document.location='Home.html'" >Home</button>
+            <button onclick="document.location='Event.html'" >Event</button>
+            <button onclick="document.location='about_us.html'" >About</button>
+           <button style="float: right;"onclick="document.getElementById('log').style.display='block';">Sign in</button>
+        </nav>
+        <h2>Ola! Visitors</h2>
+    <p>Due this pandemic Situation we created this website.<b>
+        So everyone can release their stress by playing game.
+        <br>This idea is not new but we will insure you that we will update our services<br>
+        and Always comes with some new things
+    </b></p>
+    <h3>For any help contact us!</h3>
+    <p><b>Mob.no-</b>+911118923889</p><br>
+    <p><b>Email:-</b>silver6@gmail.com</p>
+            <br>
+            
+      <!--Log in modal form-->
+
+      <div id="log" class="modal">
+
+        <form class="content" >
+
+            <div class="avatar">
+                
+            <span class="close" title="close" onclick="document.getElementById('log').style.display='none'">&times;</span>
+                <img src="user.jpg" alt="no-image" class="user">
+                </div>
+                <b>
+                <div class="container">
+            <label><span>Username</span><br>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+            </label>
+            <br><br>
+            <label>
+                <span>Password</span><br>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                <br><br>
+                </label>
+                <button style="background-color: darkturquoise;" type="submit" name="login" id="login" onclick="checkdetail();">Login</button><br><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="check" id="check"><span>Remember me</span>
+                </label>
+    </div>
+    <div class="container">
+        <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">Cancel</button>
+  <span class="psw"><a href="#">Forgot password?</a></span><br><br>
+  <button style="background-color: blueviolet;" type="button" onclick="document.location='L_form.html'">Create Account</button>
+    </div></b></form></div>
+    </body>
+    
+</html>
