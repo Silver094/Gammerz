@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="L_form.css">
+    </head>
+    <script>
+ 
+        function validateform()
+        {
+             var name=document.myform.fname.value;
+              var gname=document.myform.gname.value;
+            var address=document.myform.adr.value;
+              var number=document.myform.number.value;
+            var email=document.myform.email.value;
+               var password1=document.myform.Password1.value;
+               var password2=document.myform.Password2.value;
+             if(name=='')
+            {   
+            document.getElementById('nameloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Please Provide Input";
+            return false;
+            }
+            else
+            {
+                document.getElementById('nameloc').style.color="Green";
+                document.getElementById('nameloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+            }
+            if(gname=='')
+            {   
+            document.getElementById('gnameloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Please Provide Input";
+            return false;
+            }
+            else
+            {
+                document.getElementById('gnameloc').style.color="Green";
+                document.getElementById('gnameloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+            
+            }
+            if(address=='')
+            {   
+            document.getElementById('adrloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Please Provide Input";
+            return false;
+            }
+            else
+            {
+                document.getElementById('adrloc').style.color="Green";
+                document.getElementById('adrloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+            
+            }
+            
+            if(number==''||number.length<10)
+            {   
+            document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Wrong input";
+            return false;
+            }
+           
+            else
+            {
+                document.getElementById('numberloc').style.color="Green";
+                document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+            
+            }
+            
+            if(email.index('@')<1||email.index('.')<email.index('@')+2||email.index('.')+2>email.length)
+             {
+                 document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Wrong Input";
+                 return false;
+             }
+             else
+             {
+                 document.getElementById('emailloc').style.color="Green";
+                 document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered Correctly";
+            
+             }
+            if(password1.length<7)
+            {   
+            document.getElementById('password1loc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Password must contain 7 character";
+            return false;
+            }
+            else
+            {
+                document.getElementById('password1loc').style.color="Green";
+                document.getElementById('password1loc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered Correctly";
+            
+            }
+            if(password2!=password1||password2=='')
+            {   
+            document.getElementById('password2loc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Both password must be equal";
+            return false;
+            }
+            else
+            {
+                document.getElementById('password2loc').style.color="Green";
+                document.getElementById('password2loc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered Correctly";
+            }
+return true;
+            
+        }
+        localStorage.setItem("gname","ho");        
+    </script>
+    <body>
+       
+            
+        <div class="container">
+        <form action='#' class="myform" name="myform"  onsubmit="return validateform()">        
+        <h3>Create Account</h3>
+        <label> Full Name<br>
+        <input type="text" id="fullname" name="fname" placeholder="ITHAN HUNT"></label>
+        <span id="nameloc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+        <label for="gname">User Name</label>
+        <input type="text" id="gname" name="gameid" placeholder="JOHN WALKER" >
+        <span id="gnameloc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+        <label for="adr">Address</label>
+        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+        <span id="adrloc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+        <label for="number">Contect No.</label> 
+        <input type="text" id="number" name="number"placeholder="+919876543210">
+        <span id="numberloc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="ithan@example.com" >
+        <span id="emailloc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+        <label for="Password1">Password</label>
+        <input type="password" id="Password1" name="Password1" placeholder="Enter Pasword" >
+        <span id="password1loc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+            <label for="Password2">Confim Password</label>
+                <input type="password" id="Password2" name="Password2" placeholder="Re-Enter Password" >
+                <span id="password2loc" style="font-size:large;color:rgb(173, 2, 39);"></span>
+        <br><input type="checkbox" checked="checked" name="sameadr" id="check"> I Am agree to all term and conditions
+        </label>
+        <input type="submit" value="Create Account" class="btn">
+        </form>
+        <button onclick="window.history.back();">Go Back</button>
+        </div>
+    </body>
+  
+
+</html>

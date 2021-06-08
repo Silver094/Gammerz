@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<link rel="stylesheet" href="home.css">
+</head> <script>
+    var modal=document.getElementById('log');
+  window.onclick=function(Event)
+  {
+      if(event.target==log)
+      {
+          modal.style.display="none";
+          
+      }
+      localStorage.setItem("gname","ho");    
+   }
+    var Index = 0;
+    function javaslide() {
+      var i;
+      var x = document.getElementsByClassName("slide");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      Index++;
+      if (Index > x.length) {Index = 1}
+      x[Index-1].style.display="block";
+
+      setTimeout(javaslide, 3000);
+    }
+   function checkdetail()
+   {
+       window.location.replace("https:www.google.com");
+   }
+ 
+   </script>
+
+    
+    <body style="background-color: beige; margin: 0 0 0 0;" onload="javaslide();">
+            <!--navigation bar-->
+        <nav class="head">
+            <button onclick="document.location='Home.html'" >Home</button>
+            <button onclick="document.location='Event.html'" >Event</button>
+            <button onclick="document.location='About.html'" >About</button>
+           <button style="float: right;"onclick="document.getElementById('log').style.display='block';">Sign in</button>
+        </nav>
+            <!--slides-->
+            <section>
+             <img class="slide" src="g2.jpg" alt="no-image" >
+            <img class="slide" src="val.jpg" alt="no image">
+            <img class="slide" src="g7.jpg" alt="no-image">
+            <img class="slide" src="g3.jpg" alt="no-image">
+            <img class="slide" src="g4.jpg" alt="no-image">
+            <img class="slide" src="g5.jpg" alt="no-image">
+            <img  class="slide" src="g6.jpg" alt="no-image">
+        </section>
+        <!--Information part-->
+        <section class="data">
+            <h2 class="title"><span style="background-color: white;">GAMEERZ</span></h2>
+        <p><i>Hello Visitors</i></p>
+        <p>We have created a website only for gaming purpose.<br>
+             Here everyone can play the game they want without any hesitation. <br>
+            This website experience will make you come many times.<br>
+            We have many online games which you can play.Winners will always get rewards.<u>If you need any help Contact us</u>
+            <span style="color: chocolate;">enjoy!!</span>  </p>
+        </section>
+    
+        <!--Log in modal form-->
+
+        <div id="log" class="modal">
+
+            <form class="content" >
+
+                <div class="avatar">
+                    
+                <span class="close" title="close" onclick="document.getElementById('log').style.display='none'">&times;</span>
+                    <img src="user.jpg" alt="no-image" class="user">
+                    </div>
+                    <b>
+                    <div class="container">
+                <label><span>Username</span><br>
+                <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+                </label>
+                <br><br>
+                <label>
+                    <span>Password</span><br>
+                    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                    <br><br>
+                    </label>
+                    <button style="background-color: darkturquoise;" type="submit" name="login" id="login" onclick="checkdetail();">Login</button><br><br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="check" id="check"><span>Remember me</span>
+                    </label>
+        </div>
+        <div class="container">
+            <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">Forgot password?</a></span><br><br>
+      <button style="background-color: blueviolet;" type="button" onclick="document.location='L_form.html'">Create Account</button>
+        </div></b></form></div>
+    
+
+    </body>
+   
+    
+</html>
