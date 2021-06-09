@@ -1,3 +1,1 @@
-In Home.html and about_us.html
-i want to use data that is stored by l_form.html
-but unable to do it...........
+Done
