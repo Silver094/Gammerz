@@ -1,3 +1,3 @@
-I want to make a login system 
-for which i have to stop the javaslide function but unable to  do it.
-please help!!
+In Home.html and about_us.html
+i want to use data that is stored by l_form.html
+but unable to do it...........
