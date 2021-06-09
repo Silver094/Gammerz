@@ -2,45 +2,59 @@
 <html>
    <head>
 <link rel="stylesheet" href="home.css">
-<script>
-    var modal=document.getElementById('log');
-    window.onclick=function(Event)
-    {
-        if(event.target==log)
-        {
-            modal.style.display="none";
-            
-        }}
-    </script>
     </head>
+    <script>
+        var modal=document.getElementById('log');
+      window.onclick=function(Event)
+      {
+          if(event.target==log)
+          {
+              modal.style.display="none";
+              
+          }
+             
+       }
+       function checkdetail()
+       {
+           var username=localStorage.getItem("username").value;
+           var password=localStorage.getItem("password").value;
+         if((document.content.uname.value===username)&&(document.content.password.value===password))
+                window.open("Event.html");
+        else
+        alert("Wrong Input");
+       }
+       
+       </script>
     <body style="background-color: beige; margin: 0 0 0 0;">
             <!--navigation bar-->
         <nav class="head">
             <button onclick="document.location='Home.html'" >Home</button>
-            <button onclick="document.location='Event.html'" >Event</button>
+            <button onclick="document.getElementById('log').style.display='block';" >Event</button>
             <button onclick="document.location='about_us.html'" >About</button>
            <button style="float: right;"onclick="document.getElementById('log').style.display='block';">Sign in</button>
         </nav>
+        <section style="margin-left: 15px;">
         <h2>Ola! Visitors</h2>
-    <p>Due this pandemic Situation we created this website.<b>
+    <p>Due to this pandemic Situation we created this website.<b>
         So everyone can release their stress by playing game.
-        <br>This idea is not new but we will insure you that we will update our services<br>
+        <br>This idea is not new but we will insure you that we will update our services frequently<br>
         and Always comes with some new things
     </b></p>
     <h3>For any help contact us!</h3>
     <p><b>Mob.no-</b>+911118923889</p><br>
+    <p><b>Mob.no-</b>+912344828383</p>
     <p><b>Email:-</b>silver6@gmail.com</p>
-            <br>
+            <br></section>
             
-      <!--Log in modal form-->
+    <!--Log in modal form-->
 
-      <div id="log" class="modal">
+    <div id="log" class="modal">
 
-        <form class="content" >
+        <form onsubmit="checkdetail()" class="content" name='content' id="content"> 
 
             <div class="avatar">
                 
-            <span class="close" title="close" onclick="document.getElementById('log').style.display='none'">&times;</span>
+            <span class="close" title="close" onclick="document.getElementById('log').style.display='none';">&times;</span>
                 <img src="user.jpg" alt="no-image" class="user">
                 </div>
                 <b>
@@ -54,11 +68,12 @@
                 <input type="password" placeholder="Enter Password" name="password" id="password" required>
                 <br><br>
                 </label>
-                <button style="background-color: darkturquoise;" type="submit" name="login" id="login" onclick="checkdetail();">Login</button><br><br>
+                <button style="background-color: darkturquoise;"  type="submit" name="login" id="login" >Login</button><br><br>
                 <label>
                     <input type="checkbox" checked="checked" name="check" id="check"><span>Remember me</span>
                 </label>
     </div>
+</b>
     <div class="container">
         <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">Cancel</button>
   <span class="psw"><a href="#">Forgot password?</a></span><br><br>

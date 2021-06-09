@@ -27,10 +27,7 @@
 
       intervalID = setTimeout(javaslide, 3000);
     }
-   function checkdetail()
-   {
-       window.location.replace("https:www.google.com");
-   }
+  
 
    function handleOnSignInClick(){
         document.getElementById('log').style.display='block';
@@ -41,6 +38,16 @@
         document.getElementById('log').style.display='none';
         intervalID = setTimeout(javaslide, 3000);
    }
+   function checkdetail()
+   {
+       var username=localStorage.getItem("username").value;
+       var password=localStorage.getItem("password").value;
+     if((document.content.uname.value===username)&&(document.content.password.value===password))
+            window.open("Event.html");
+    else
+    alert("Wrong Input");
+   }
+   
    </script>
 
     
@@ -48,7 +55,7 @@
             <!--navigation bar-->
         <nav class="head">
             <button onclick="document.location='Home.html'" >Home</button>
-            <button onclick="document.location='Event.html'" >Event</button>
+            <button onclick=handleOnSignInClick() >Event</button>
             <button onclick="document.location='about_us.html'" >About</button>
            <button style="float: right;"onclick=handleOnSignInClick()>Sign in</button>
         </nav>
@@ -77,7 +84,7 @@
 
         <div id="log" class="modal">
 
-            <form class="content" onsubmit="checkdetail();">
+            <form onsubmit="checkdetail()" class="content" name='content' id="content"> 
 
                 <div class="avatar">
                     
@@ -95,11 +102,12 @@
                     <input type="password" placeholder="Enter Password" name="password" id="password" required>
                     <br><br>
                     </label>
-                    <button style="background-color: darkturquoise;" type="submit" name="login" id="login" >Login</button><br><br>
+                    <button style="background-color: darkturquoise;"  type="submit" name="login" id="login" >Login</button><br><br>
                     <label>
                         <input type="checkbox" checked="checked" name="check" id="check"><span>Remember me</span>
                     </label>
         </div>
+    </b>
         <div class="container">
             <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw"><a href="#">Forgot password?</a></span><br><br>

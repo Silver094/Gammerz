@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<link rel="stylesheet" href="home.css">
+</head> <script>
+    var Index = 0;
+    function javaslide() {
+      var i;
+      var x = document.getElementsByClassName("slide");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      Index++;
+      if (Index > x.length) {Index = 1}
+      x[Index-1].style.display="block";
+
+      setTimeout(javaslide, 3000);
+    }
+ 
+   </script>
+
+    
+    <body style="background-color: beige; margin: 0 0 0 0;" onload="javaslide();">
+            <!--navigation bar-->
+        <nav class="head">
+            <button onclick="document.location='Home_login.html'" >Home</button>
+            <button onclick="document.location='Event.html'" >Event</button>
+            <button onclick="document.location='about_login.html'" >About</button>
+            <button style="float: right;"onclick="window.location.replace('Home.html','_self')">Sign out</button>
+        </nav>
+            <!--slides-->
+            <section>
+             <img class="slide" src="g2.jpg" alt="no-image" >
+            <img class="slide" src="val.jpg" alt="no image">
+            <img class="slide" src="g7.jpg" alt="no-image">
+            <img class="slide" src="g3.jpg" alt="no-image">
+            <img class="slide" src="g4.jpg" alt="no-image">
+            <img class="slide" src="g5.jpg" alt="no-image">
+            <img  class="slide" src="g6.jpg" alt="no-image">
+        </section>
+        <!--Information part-->
+        <section class="data">
+            <h2 class="title"><span style="background-color: white;">GAMEERZ</span></h2>
+        <p><i>Hello Visitors</i></p>
+        <p>We have created a website only for gaming purpose.<br>
+             Here everyone can play the game they want without any hesitation. <br>
+            This website experience will make you come many times.<br>
+            We have many online games which you can play.Winners will always get rewards.<u>If you need any help Contact us</u>
+            <span style="color: chocolate;">enjoy!!</span>  </p>
+        </section>
+    
+
+    </body>
+   
+    
+</html>

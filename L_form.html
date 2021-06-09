@@ -59,8 +59,7 @@
                 document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
             
             }
-            
-            if(email.index('@')<1||email.index('.')<email.index('@')+2||email.index('.')+2>email.length)
+            if((email.index('@')<1)||(email.index('.')<email.index('@')+2)||(email.index('.')+2>email.length))
              {
                  document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Wrong Input";
                  return false;
@@ -95,13 +94,19 @@
 return true;
             
         }
-        localStorage.setItem("gname","ho");        
-    </script>
+        function store() {
+    var inputUsername=myform.gname.value;
+    var inputPassword=myform.Password1.value;
+    localStorage.setItem("username", inputUsername);
+    localStorage.setItem("password", inputPassword);
+   } 
+
+</script>
     <body>
        
             
         <div class="container">
-        <form action='#' class="myform" name="myform"  onsubmit="return validateform()">        
+        <form action='#' class="myform" name="myform"  onmousemove="validateform()" onsubmit="store()"  >
         <h3>Create Account</h3>
         <label> Full Name<br>
         <input type="text" id="fullname" name="fname" placeholder="ITHAN HUNT"></label>
@@ -126,7 +131,7 @@ return true;
                 <span id="password2loc" style="font-size:large;color:rgb(173, 2, 39);"></span>
         <br><input type="checkbox" checked="checked" name="sameadr" id="check"> I Am agree to all term and conditions
         </label>
-        <input type="submit" value="Create Account" class="btn">
+        <input type="submit" value="Create Account" class="btn" >
         </form>
         <button onclick="window.history.back();">Go Back</button>
         </div>
