@@ -40,8 +40,8 @@
    }
    function checkdetail()
    {
-       var username=localStorage.getItem("username").value;
-       var password=localStorage.getItem("password").value;
+       var username=localStorage.getItem("username");
+       var password=localStorage.getItem("password");
      if((document.content.uname.value===username)&&(document.content.password.value===password))
             window.open("Event.html");
     else
@@ -84,7 +84,7 @@
 
         <div id="log" class="modal">
 
-            <form onsubmit="checkdetail()" class="content" name='content' id="content"> 
+            <form onsubmit=checkdetail() class="content" name='content' id="content"> 
 
                 <div class="avatar">
                     
