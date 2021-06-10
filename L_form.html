@@ -59,7 +59,7 @@
                 document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
             
             }
-            if((email.index('@')<1)||(email.index('.')<email.index('@')+2)||(email.index('.')+2>email.length))
+            if(email===""||email.search('@')=='-1'||email.search('.')=='-1'||email.indexOf('@')+2>email.indexOf('.')||email.indexOf('.')+2>=email.length)
              {
                  document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Wrong Input";
                  return false;
@@ -137,7 +137,9 @@ return true;
         </form>
         <button onclick="window.history.back();">Go Back</button>
         </div>
+        
     </body>
+
   
 
 </html>
