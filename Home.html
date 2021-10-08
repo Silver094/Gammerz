@@ -1,54 +1,8 @@
 <!DOCTYPE html>
 <html>
    <head>
-<link rel="stylesheet" href="home.css">
-</head> <script>
-    var intervalID;
-    var modal=document.getElementById('log');
-  window.onclick=function(Event)
-  {
-      if(event.target==log)
-      {
-          modal.style.display="none";
-          
-      }
-         
-   }
-    var Index = 0;
-    function javaslide() {
-      var i;
-      var x = document.getElementsByClassName("slide");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      Index++;
-      if (Index > x.length) {Index = 1}
-      x[Index-1].style.display="block";
-
-      intervalID = setTimeout(javaslide, 3000);
-    }
-  
-
-   function handleOnSignInClick(){
-        document.getElementById('log').style.display='block';
-        clearTimeout(intervalID);
-   }
-
-   function handleOnClose(){
-        document.getElementById('log').style.display='none';
-        intervalID = setTimeout(javaslide, 3000);
-   }
-   function checkdetail()
-   {
-       var username=localStorage.getItem("username");
-       var password=localStorage.getItem("password");
-     if((document.content.uname.value===username)&&(document.content.password.value===password))
-            window.open("Event.html");
-    else
-    alert("Wrong Input");
-   }
-   
-   </script>
+<link rel="stylesheet" href="css/home.css">
+</head>
 
     
     <body style="background-color: beige; margin: 0 0 0 0;" onload="javaslide();">
@@ -61,14 +15,14 @@
         </nav>
             <!--slides-->
             <section>
-                <img class="slide" src="g1.jpg" alt="no-image" >
-             <img class="slide" src="g2.jpg" alt="no-image" >
-            <img class="slide" src="val.jpg" alt="no image">
-            <img class="slide" src="g7.jpg" alt="no-image">
-            <img class="slide" src="g3.jpg" alt="no-image">
-            <img class="slide" src="g4.jpg" alt="no-image">
-            <img class="slide" src="g5.jpg" alt="no-image">
-            <img  class="slide" src="g6.jpg" alt="no-image">
+            <img class="slide" src="img/g1.jpg" alt="no-image" >
+            <img class="slide" src="img/g2.jpg" alt="no-image" >
+            <img class="slide" src="img/val.jpg" alt="no image">
+            <img class="slide" src="img/g7.jpg" alt="no-image">
+            <img class="slide" src="img/g3.jpg" alt="no-image">
+            <img class="slide" src="img/g4.jpg" alt="no-image">
+            <img class="slide" src="img/g5.jpg" alt="no-image">
+            <img class="slide" src="img/g6.jpg" alt="no-image">
         </section>
         <!--Information part-->
         <section class="data">
@@ -90,7 +44,7 @@
                 <div class="avatar">
                     
                 <span class="close" title="close" onclick=handleOnClose()>&times;</span>
-                    <img src="user.jpg" alt="no-image" class="user">
+                    <img src="img/user.jpg" alt="no-image" class="user">
                     </div>
                     <b>
                     <div class="container">
@@ -116,14 +70,14 @@
         </div></b></form></div>
     <!-- Footer -->
 <footer style="background-color: black; text-align: center; color: white; margin-bottom: 0%; padding-top: 15px; padding-bottom: 5px;">
-    <a href="#"><img style="width: 30px;height: 30px;" src="facebook.jpg"></a>&nbsp;
-    <a href="#"><img style="width: 30px;height: 30px;" src="twitter.jpg"></a>&nbsp;
-    <a href="#"><img style="width: 30px;height: 30px;" src="insta.jpg"></a><br>&nbsp;
+    <a href="#"><img style="width: 30px;height: 30px;" src="img/facebook.jpg"></a>&nbsp;
+    <a href="#"><img style="width: 30px;height: 30px;" src="img/twitter.jpg"></a>&nbsp;
+    <a href="#"><img style="width: 30px;height: 30px;" src="img/insta.jpg"></a><br>&nbsp;
     <p style="font-size: large; font-style: italic;">Created by Silver
     </p>
   </footer>
   
-
+    <script src="js/home.js"></script>
     </body>
    
     

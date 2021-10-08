@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="L_form.css">
+        <link rel="stylesheet" href="css/L_form.css">
     </head>
     <script>
- 
         function validateform()
         {
              var name=document.myform.fname.value;
@@ -16,80 +15,80 @@
                var password2=document.myform.Password2.value;
              if(name=='')
             {   
-            document.getElementById('nameloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Please Provide Input";
+            document.getElementById('nameloc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/> Please Provide Input";
             return false;
             }
             else
             {
                 document.getElementById('nameloc').style.color="Green";
-                document.getElementById('nameloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+                document.getElementById('nameloc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered";
             }
             if(gname=='')
             {   
-            document.getElementById('gnameloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Please Provide Input";
+            document.getElementById('gnameloc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/> Please Provide Input";
             return false;
             }
             else
             {
                 document.getElementById('gnameloc').style.color="Green";
-                document.getElementById('gnameloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+                document.getElementById('gnameloc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered";
             
             }
             if(address=='')
             {   
-            document.getElementById('adrloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Please Provide Input";
+            document.getElementById('adrloc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/> Please Provide Input";
             return false;
             }
             else
             {
                 document.getElementById('adrloc').style.color="Green";
-                document.getElementById('adrloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+                document.getElementById('adrloc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered";
             
             }
             
             if(number==''||number.length<10)
             {   
-            document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/> Wrong input";
+            document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/> Wrong input";
             return false;
             }
            
             else
             {
                 document.getElementById('numberloc').style.color="Green";
-                document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered";
+                document.getElementById('numberloc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered";
             
             }
             if(email===""||email.search('@')=='-1'||email.search('.')=='-1'||email.indexOf('@')+2>email.indexOf('.')||email.indexOf('.')+2>=email.length)
              {
-                 document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Wrong Input";
+                 document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/>Wrong Input";
                  return false;
              }
              else
              {
                  document.getElementById('emailloc').style.color="Green";
-                 document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered Correctly";
+                 document.getElementById('emailloc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered Correctly";
             
              }
             if(password1.length<7)
             {   
-            document.getElementById('password1loc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Password must contain 7 character";
+            document.getElementById('password1loc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/>Password must contain 7 character";
             return false;
             }
             else
             {
                 document.getElementById('password1loc').style.color="Green";
-                document.getElementById('password1loc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered Correctly";
+                document.getElementById('password1loc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered Correctly";
             
             }
             if(password2!=password1||password2=='')
             {   
-            document.getElementById('password2loc').innerHTML="<img style='width:25px; height:25px;' src='wrong.gif'/>Both password must be equal";
+            document.getElementById('password2loc').innerHTML="<img style='width:25px; height:25px;' src='img/wrong.gif'/>Both password must be equal";
             return false;
             }
             else
             {
                 document.getElementById('password2loc').style.color="Green";
-                document.getElementById('password2loc').innerHTML="<img style='width:25px; height:25px;' src='tick.gif'/> Bravo! You Entered Correctly";
+                document.getElementById('password2loc').innerHTML="<img style='width:25px; height:25px;' src='img/tick.gif'/> Bravo! You Entered Correctly";
             }
 return true;
             
@@ -137,7 +136,6 @@ return true;
         </form>
         <button onclick="window.history.back();">Go Back</button>
         </div>
-        
     </body>
 
   
